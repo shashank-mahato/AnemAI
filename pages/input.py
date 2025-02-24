@@ -3,8 +3,6 @@ import time
 import cv2
 import numpy as np
 from PIL import Image
-from geopy.geocoders import Nominatim
-import requests
 import tempfile
 import json
 
