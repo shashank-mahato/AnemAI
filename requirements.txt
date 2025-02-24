@@ -8,4 +8,4 @@ joblib
 langchain
 langchain-groq
 googlemaps
-sklearn
+scikit-learn
