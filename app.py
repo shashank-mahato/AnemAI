@@ -6,14 +6,15 @@ st.set_page_config(page_title="Home | AI Anemia Detection", page_icon="🩸", la
 hide_streamlit_style = """
     <style>
         [data-testid="stSidebar"] {display: none;}
-        .header-container {
+        .container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Align logo to the left */
+            text-align: center;
         }
         .logo {
-            width: 80px; /* Adjust logo size */
-            margin-right: 15px;
+            width: 100px; /* Adjust logo size */
+            margin-bottom: 10px;
         }
         .title {
             font-size: 2.5rem;
@@ -22,7 +23,6 @@ hide_streamlit_style = """
             margin: 0;
         }
         .subtitle {
-            text-align: center;
             font-size: 1.3rem;
             color: #444;
             margin-top: 5px;
@@ -31,20 +31,18 @@ hide_streamlit_style = """
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# ✅ Logo & Title in the Same Line (Logo aligned to the left)
+# ✅ Logo, Title & Subtitle (All Centered)
 logo_path = "assets/logo.png"  # Ensure this exists!
 st.markdown(
     f"""
-    <div class="header-container">
+    <div class="container">
         <img src="{logo_path}" class="logo">
         <p class="title">🩸 AI-Powered Anemia Detection</p>
+        <p class="subtitle">A non-invasive AI tool analyzing eye, lip, & skin images to detect anemia in seconds.</p>
     </div>
     """,
     unsafe_allow_html=True,
 )
-
-# ✅ Subtitle (Centered)
-st.markdown("<p class='subtitle'>A non-invasive AI tool analyzing eye, lip, & skin images to detect anemia in seconds.</p>", unsafe_allow_html=True)
 
 # ✅ Hero Image
 hero_img = "hero_image.jpg"
