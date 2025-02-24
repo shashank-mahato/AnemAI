@@ -51,8 +51,9 @@ The **AI-Powered Non-Invasive Anemia Detection System** is an innovative healthc
 - **📊 NumPy & Pandas** – Data handling and analysis
 
 ### 📍 **Geolocation & Doctor Recommendation**
-- **🗺️ Google Maps API** – Fetches nearby doctors
-- **🌍 Geopy** – Location detection
+- **🗺️ Google Places API** – Fetches nearby doctors
+- **🌍 Google Geolocation API** – Location detection
+- **🌐 Google Maps JavaScript API** - Location aware features
 
 ### 🤖 **AI Chatbot for Medical Advice**
 - **💬 LangChain with Llama 3.3-70B** – Provides AI-driven medical insights
