@@ -4,6 +4,7 @@ numpy
 opencv-python-headless
 pillow
 tensorflow-cpu
+tensorflow.lite 
 joblib
 langchain
 langchain-groq
