@@ -6,7 +6,7 @@ pillow
 tensorflow-cpu
 joblib
 langchain==0.1.14
-langchain-core==0.1.33
+langchain-core==0.1.37
 pydantic==2.6.4
 langchain-groq
 googlemaps
