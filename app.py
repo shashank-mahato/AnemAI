@@ -6,35 +6,45 @@ st.set_page_config(page_title="Home | AI Anemia Detection", page_icon="🩸", la
 hide_streamlit_style = """
     <style>
         [data-testid="stSidebar"] {display: none;}
-        .center {
+        .header-container {
             display: flex;
-            justify-content: center;
             align-items: center;
-            text-align: center;
+            justify-content: center;
+        }
+        .logo {
+            width: 80px; /* Adjust logo size */
+            margin-right: 15px;
         }
         .title {
             font-size: 2.5rem;
             font-weight: bold;
             color: #B22222;
-            margin-top: 10px;
+            margin: 0;
         }
         .subtitle {
+            text-align: center;
             font-size: 1.3rem;
             color: #444;
+            margin-top: 5px;
         }
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# ✅ Load and Display the Transparent Logo (Centered)
+# ✅ Logo & Title in the Same Line
 logo_path = "assets/logo.png"  # Ensure this exists!
-st.markdown("<div class='center'>", unsafe_allow_html=True)
-st.image(logo_path, width=120)  # Adjust width as needed
-st.markdown("</div>", unsafe_allow_html=True)
+st.markdown(
+    f"""
+    <div class="header-container">
+        <img src="{logo_path}" class="logo">
+        <p class="title">🩸 AI-Powered Anemia Detection</p>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
-# ✅ Title and Subtitle (Centered)
-st.markdown("<div class='center'><p class='title'>🩸 AI-Powered Anemia Detection</p></div>", unsafe_allow_html=True)
-st.markdown("<div class='center'><p class='subtitle'>A non-invasive AI tool analyzing eye, lip, & skin images to detect anemia in seconds.</p></div>", unsafe_allow_html=True)
+# ✅ Subtitle (Centered)
+st.markdown("<p class='subtitle'>A non-invasive AI tool analyzing eye, lip, & skin images to detect anemia in seconds.</p>", unsafe_allow_html=True)
 
 # ✅ Hero Image
 hero_img = "hero_image.jpg"
