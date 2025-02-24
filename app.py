@@ -10,43 +10,24 @@ hide_streamlit_style = """
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-st.markdown(
-    """
-    <style>
-        .title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #B22222;
-        }
-        .subtitle {
-            text-align: center;
-            font-size: 1.3rem;
-            color: #444;
-        }
-        .features {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-        .start-btn {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+# ✅ Load and Display the Transparent Logo
+logo_path = "assets/logo.png"  # Ensure this exists!
+col1, col2, col3 = st.columns([1, 3, 1])
+with col2:
+    st.image(logo_path, width=120)  # Adjust width as needed
 
+# ✅ Title and Subtitle
 st.markdown("<p class='title'>🩸 AI-Powered Anemia Detection</p>", unsafe_allow_html=True)
 st.markdown("<p class='subtitle'>A non-invasive AI tool analyzing eye, lip, & skin images to detect anemia in seconds.</p>", unsafe_allow_html=True)
 
-hero_img = "hero_image.jpg" 
+# ✅ Hero Image
+hero_img = "hero_image.jpg"
 try:
     st.image(hero_img, use_container_width=True)
 except:
     pass 
 
+# ✅ Features Section
 st.markdown("### 🌟 Why Use This?")
 st.markdown(
     """
