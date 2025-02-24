@@ -1,7 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-GOOGLE_MAPS_API_KEY = "YOUR_GOOGLE_MAPS_API_KEY"     
+GOOGLE_MAPS_API_KEY = st.secrets["GOOGLE_MAPS_API_KEY"]     
 
 st.set_page_config(page_title="Find Doctors Near Me", page_icon="🩺", layout="centered")
 
