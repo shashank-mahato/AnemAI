@@ -9,7 +9,7 @@ hide_streamlit_style = """
         .header-container {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; /* Align logo to the left */
         }
         .logo {
             width: 80px; /* Adjust logo size */
@@ -31,7 +31,7 @@ hide_streamlit_style = """
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# ✅ Logo & Title in the Same Line
+# ✅ Logo & Title in the Same Line (Logo aligned to the left)
 logo_path = "assets/logo.png"  # Ensure this exists!
 st.markdown(
     f"""
