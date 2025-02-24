@@ -71,4 +71,9 @@ st.markdown(
 st.markdown("---")
 st.subheader("🚀 Ready to Check for Anemia?")
 col1, col2, col3 = st.columns([1, 2, 1])
-with 
+with col2:
+    if st.button("🔍 Start Diagnosis", help="Proceed to upload your images and begin analysis"):
+        st.switch_page("pages/input.py")  
+
+st.markdown("---")
+st.markdown("<p style='text-align:center;'>🔬 <strong>AI-Powered | Fast | Reliable</strong></p>", unsafe_allow_html=True)
