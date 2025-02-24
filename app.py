@@ -13,20 +13,20 @@ hide_streamlit_style = """
             width: 100%;
         }
         .title {
-            font-size: 3rem;  /* Increased title size */
+            font-size: 4rem;  /* Increased title size */
             font-weight: bold;
             color: #B22222;
             text-align: left;
             flex-grow: 1;
         }
         .subtitle {
-            font-size: 1.7rem;  /* Increased subtitle size */
+            font-size: 2.2rem;  /* Increased subtitle size */
             color: #444;
             text-align: left;
-            margin-top: 5px;
+            margin-top: 10px;
         }
         .logo {
-            max-width: 160px; /* Increased logo size */
+            max-width: 180px; /* Increased logo size */
             margin-left: auto;
         }
     </style>
@@ -36,7 +36,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # ✅ Header with Title, Subtitle, and Right-Aligned Logo
 st.markdown('<div class="header-container">', unsafe_allow_html=True)
 
-col1, col2 = st.columns([3, 1])  # Title takes more space, logo less
+col1, col2 = st.columns([3, 1])  # Title takes more space, logo takes less
 with col1:
     st.markdown("<p class='title'>🩸 AI-Powered Anemia Detection</p>", unsafe_allow_html=True)
     st.markdown("<p class='subtitle'>A non-invasive AI tool analyzing eye, lip, & skin images to detect anemia in seconds.</p>", unsafe_allow_html=True)
@@ -44,7 +44,7 @@ with col1:
 with col2:
     logo_path = "assets/logo.png"  # Ensure this path is correct!
     try:
-        st.image(logo_path, width=160)  # Logo shifted to the rightmost side
+        st.image(logo_path, width=180)  # Larger logo on the right
     except:
         st.warning("⚠️ Logo not found. Please check the file path.")
 
@@ -76,4 +76,4 @@ with col2:
         st.switch_page("pages/input.py")  
 
 st.markdown("---")
-st.markdown("<p style='text-align:center;'>🔬 <strong>AI-Powered | Fast | Reliable</strong></p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center; font-size:1.5rem;'>🔬 <strong>AI-Powered | Fast | Reliable</strong></p>", unsafe_allow_html=True)
