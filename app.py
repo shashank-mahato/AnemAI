@@ -11,7 +11,7 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # ✅ Load and Display the Transparent Logo
-logo_path = "assets/logo.png"  # Ensure this exists!
+logo_path = "assets/logo.jpg"  # Ensure this exists!
 col1, col2, col3 = st.columns([1, 3, 1])
 with col2:
     st.image(logo_path, width=120)  # Adjust width as needed
