@@ -6,46 +6,49 @@ st.set_page_config(page_title="Home | AI Anemia Detection", page_icon="🩸", la
 hide_streamlit_style = """
     <style>
         [data-testid="stSidebar"] {display: none;}
-        .container {
+        .header-container {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            text-align: center;
-            margin-top: 30px; /* Increased margin for more space */
+            justify-content: space-between;
+            width: 100%;
         }
         .title {
-            font-size: 2.5rem;
+            font-size: 3rem;  /* Increased title size */
             font-weight: bold;
             color: #B22222;
-            margin-top: 15px;
+            text-align: left;
+            flex-grow: 1;
         }
         .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.7rem;  /* Increased subtitle size */
             color: #444;
+            text-align: left;
             margin-top: 5px;
+        }
+        .logo {
+            max-width: 160px; /* Increased logo size */
+            margin-left: auto;
         }
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# ✅ Logo, Title & Subtitle (All Centered)
-st.markdown("<div class='container'>", unsafe_allow_html=True)
+# ✅ Header with Title, Subtitle, and Right-Aligned Logo
+st.markdown('<div class="header-container">', unsafe_allow_html=True)
 
-# **Try loading the logo**
-logo_path = "assets/logo.png"  # Ensure the file exists in this path!
-try:
-    st.image(logo_path, width=150)  # Increased width for better visibility
-except:
-    st.warning("⚠️ Logo not found. Please check the file path.")
+col1, col2 = st.columns([3, 1])  # Title takes more space, logo less
+with col1:
+    st.markdown("<p class='title'>🩸 AI-Powered Anemia Detection</p>", unsafe_allow_html=True)
+    st.markdown("<p class='subtitle'>A non-invasive AI tool analyzing eye, lip, & skin images to detect anemia in seconds.</p>", unsafe_allow_html=True)
 
-st.markdown(
-    """
-    <p class="title">🩸 AI-Powered Anemia Detection</p>
-    <p class="subtitle">A non-invasive AI tool analyzing eye, lip, & skin images to detect anemia in seconds.</p>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+with col2:
+    logo_path = "assets/logo.png"  # Ensure this path is correct!
+    try:
+        st.image(logo_path, width=160)  # Logo shifted to the rightmost side
+    except:
+        st.warning("⚠️ Logo not found. Please check the file path.")
+
+st.markdown('</div>', unsafe_allow_html=True)
 
 # ✅ Hero Image
 hero_img = "hero_image.jpg"
@@ -68,9 +71,4 @@ st.markdown(
 st.markdown("---")
 st.subheader("🚀 Ready to Check for Anemia?")
 col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    if st.button("🔍 Start Diagnosis", help="Proceed to upload your images and begin analysis"):
-        st.switch_page("pages/input.py")  
-
-st.markdown("---")
-st.markdown("<p style='text-align:center;'>🔬 <strong>AI-Powered | Fast | Reliable</strong></p>", unsafe_allow_html=True)
+with 
