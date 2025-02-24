@@ -3,7 +3,7 @@ requests
 numpy
 opencv-python-headless
 pillow
-tflite-runtime
+tensorflow
 joblib
 langchain
 langchain-groq
