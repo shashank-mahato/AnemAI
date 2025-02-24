@@ -5,9 +5,9 @@ opencv-python-headless
 pillow
 tensorflow-cpu
 joblib
-langchain
-langchain-core
-pydantic<2
+langchain==0.1.14
+langchain-core==0.1.33
+pydantic==2.6.4
 langchain-groq
 googlemaps
 scikit-learn
