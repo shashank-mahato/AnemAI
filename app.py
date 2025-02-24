@@ -11,16 +11,13 @@ hide_streamlit_style = """
             flex-direction: column;
             align-items: center;
             text-align: center;
-        }
-        .logo {
-            width: 100px; /* Adjust logo size */
-            margin-bottom: 10px;
+            margin-top: 30px; /* Increased margin for more space */
         }
         .title {
             font-size: 2.5rem;
             font-weight: bold;
             color: #B22222;
-            margin: 0;
+            margin-top: 15px;
         }
         .subtitle {
             font-size: 1.3rem;
@@ -32,13 +29,19 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # ✅ Logo, Title & Subtitle (All Centered)
-logo_path = "assets/logo.png"  # Ensure this exists!
+st.markdown("<div class='container'>", unsafe_allow_html=True)
+
+# **Try loading the logo**
+logo_path = "assets/logo.png"  # Ensure the file exists in this path!
+try:
+    st.image(logo_path, width=150)  # Increased width for better visibility
+except:
+    st.warning("⚠️ Logo not found. Please check the file path.")
+
 st.markdown(
-    f"""
-    <div class="container">
-        <img src="{logo_path}" class="logo">
-        <p class="title">🩸 AI-Powered Anemia Detection</p>
-        <p class="subtitle">A non-invasive AI tool analyzing eye, lip, & skin images to detect anemia in seconds.</p>
+    """
+    <p class="title">🩸 AI-Powered Anemia Detection</p>
+    <p class="subtitle">A non-invasive AI tool analyzing eye, lip, & skin images to detect anemia in seconds.</p>
     </div>
     """,
     unsafe_allow_html=True,
