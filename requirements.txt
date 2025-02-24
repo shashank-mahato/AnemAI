@@ -1,0 +1,10 @@
+streamlit
+requests
+numpy
+opencv-python
+pillow
+tflite-runtime
+joblib
+langchain
+langchain-groq
+googlemaps
