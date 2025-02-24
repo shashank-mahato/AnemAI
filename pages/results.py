@@ -2,10 +2,10 @@ import streamlit as st
 import os
 from langchain_groq import ChatGroq
 
-os.environ["LANGSMITH_TRACING"] = "true"
-os.environ["LANGSMITH_ENDPOINT"] = "https://api.smith.langchain.com"
-os.environ["LANGSMITH_API_KEY"] = "YOUR_LANG_API_KEY"
-os.environ["GROQ_API_KEY"] = "YOUR_GROQ_API_KEY"
+LANGSMITH_TRACING = "true"  # Keep this as a string
+LANGSMITH_ENDPOINT = "https://api.smith.langchain.com"
+LANGSMITH_API_KEY = st.secrets["LANGSMITH_API_KEY"]
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
 llm = ChatGroq(model_name="llama-3.3-70b-versatile", temperature=0.7)
 
